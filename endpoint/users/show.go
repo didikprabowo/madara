@@ -5,14 +5,14 @@ import (
 )
 
 type User struct {
-    ID int `json: id`
-    Name string `json: name`
-    Email string `json: email_address`
+    ID int `json:"id"`
+    Name string `json:"name"`
+    Email string `json:"email_address"`
 }
 
 
 func RealMain(routerGroup *gin.RouterGroup) {
-    routerGroup.GET("/show", func(c *gin.Context) {
+    routerGroup.GET("/users", func(c *gin.Context) {
         data := User{
             ID: 1,
             Name: "Widnyana",
