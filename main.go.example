@@ -1,0 +1,10 @@
+package madara
+
+import (
+    _ "github.com/widnyana/madara/endpoint/users"
+)
+
+func main() {
+    app := madara.New()
+    app.Router.Run("127.0.0.1:8080")
+}
